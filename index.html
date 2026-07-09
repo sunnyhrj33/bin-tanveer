@@ -199,779 +199,662 @@
         </div>
     </section>
 
-  <!-- Packages & Pricing Section -->
-    <section id="packages" class=" bg-[#f6f5f0]">
+    <!-- Packages & Pricing Section -->
+    <section id="packages" class="py-20 bg-[#f8f7f3] border-b border-slate-200/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 opacity-0 animate-reveal-up">
-                <h2 class="serif-title text-3xl sm:text-4xl font-bold text-slate-900 mt-3 mb-4">Umrah Packages</h2>
-                <p class="text-slate-600 text-sm sm:text-base">All pricing plans are listed in PKR.</p>
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-amber-200">
+                    <i class="fa-solid fa-star text-[10px]"></i> Exclusive Packages
+                </span>
+                <h2 class="serif-title text-3xl sm:text-5xl font-bold text-slate-900 mt-4 mb-4">Choose Your Sacred Journey</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Explore our carefully curated 15 and 21 Days Umrah packages. Select between Direct Flights for a faster journey or Indirect Flights for budget-friendly rates.
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto items-start">
-                
-                <!-- Package 1 -->
-                <!-- Package 1: 15 Days Economy Package -->
-<!-- =========================================================================
-     PACKAGE 1: 15 Days Economy Package 1 (Direct Flight)
-     ========================================================================= -->
-<div class="w-full bg-white rounded-2xl shadow-sm border border-slate-200/60 overflow-hidden transform transition hover:-translate-y-1 duration-300 opacity-0 animate-reveal-left">
-    <div class="p-4 emerald-gradient text-white relative">
-        <div class="absolute top-4 right-4 bg-amber-400 text-[#0a3022] font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            15 Nights Stay
-        </div>
-        <!-- <div class="absolute bottom-4 right-4 bg-white text-[#0a3022] font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            Direct Flight
-        </div> -->
-        <h3 class="serif-title text-lg font-bold mb-0.5">15 Days Economy Package 1</h3>
-        <p class="text-emerald-100/80 text-[11px]">Travel with Us.</p>
-    </div>
+            <!-- Flights Toggle Tabs -->
+            <div class="flex justify-center mb-12">
+                <div class="bg-slate-200/60 p-1.5 rounded-2xl flex gap-2 max-w-md w-full border border-slate-300/40 shadow-inner">
+                    <button onclick="switchTab('direct')" id="tab-btn-direct" class="flex-1 py-3 px-6 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition duration-300 shadow-sm bg-[#0a3022] text-white">
+                        <i class="fa-solid fa-plane-departure text-amber-400"></i>
+                        <span>Direct Flights</span>
+                    </button>
+                    <button onclick="switchTab('indirect')" id="tab-btn-indirect" class="flex-1 py-3 px-6 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition duration-300 text-slate-600 hover:text-slate-900 hover:bg-white/50">
+                        <i class="fa-solid fa-plane-arrival text-slate-400"></i>
+                        <span>Indirect Flights</span>
+                    </button>
+                </div>
+            </div>
 
-    <!-- Hotels Layout -->
-    <div class="p-3 bg-amber-50/50 border-b border-slate-100 grid grid-cols-2 gap-4 text-xs">
-        <!-- Makkah Stay -->
-        <div class="flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Maysan Al Massi</span></div>
-                </div>
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Jahara Meysun</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Makkah ( 10 Nights )</span>
-                <span class="text-slate-500 block text-[10px] italic"><i class="fa-solid fa-bus text-[9px] mr-0.5"></i> Shuttle Service Included</span>
-            </div>
-        </div>
-        
-        <!-- Madinah Stay -->
-        <div class="border-l border-slate-200 pl-3 flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Dar Abdullah</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Madinah ( 5 Nights )</span>
-                <span class="text-transparent block text-[10px] select-none">Placeholder</span>
-            </div>
-        </div>
-    </div>
+            <!-- Tab Content Direct Flights -->
+            <div id="tab-content-direct" class="transition-all duration-300 opacity-100 scale-100">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                    
+                    <!-- Direct Card 1: 15 Days Economy -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/50 overflow-hidden transform hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="px-5 py-5 emerald-gradient text-white relative">
+                                <div class="absolute -right-4 -bottom-4 text-emerald-800/10 text-6xl font-extrabold select-none"><i class="fa-solid fa-plane"></i></div>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-emerald-900/80 text-emerald-250 border border-emerald-700/50">15 Days</span>
+                                    <span class="text-[9px] uppercase font-extrabold tracking-widest px-2 py-0.5 rounded bg-amber-400 text-[#0a3022]">Economy</span>
+                                </div>
+                                <h3 class="serif-title text-lg font-bold">15 Days Economy</h3>
+                                <p class="text-[10px] text-emerald-100/90 mt-1.5 flex items-center gap-1 font-medium"><i class="fa-solid fa-plane-departure text-[9px] text-amber-400"></i> Airblue, Air Sial (Direct)</p>
+                            </div>
 
-    <!-- Rates & Includes -->
-    <div class="p-4">
-        <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Sharing Rates (PKR)</h4>
-        <div class="space-y-1.5 text-xs sm:text-sm">
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 265,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Quad
-                </span>
-                <span class="font-bold text-slate-900">Rs. 275,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Triple
-                </span>
-                <span class="font-bold text-slate-900">Rs. 285,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Double
-                </span>
-                <span class="font-bold text-emerald-700">Rs. 295,000</span>
-            </div>
-        </div>
-        
-        <div class="mt-3 pt-3 border-t border-slate-100">
-            <h5 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Package Includes</h5>
-            <div class="flex flex-wrap gap-1.5">
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-passport text-[9px]"></i> Umrah Visa</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Air Ticket</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-bus text-[9px]"></i> Hotel Transport</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Direct Flight</span>
-            </div>
-        </div>
-        <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2015%20Days%20Economy%20Package%201" target="_blank" class="w-full mt-4 bg-slate-900 hover:bg-emerald-800 text-white font-bold text-xs text-center py-2.5 rounded-xl transition-all duration-300 block tracking-wide uppercase">Contact</a>
-    </div>
-</div>
+                            <!-- Hotels -->
+                            <div class="p-4 bg-amber-50/20 border-b border-slate-100 space-y-3">
+                                <div class="flex gap-2.5 items-start">
+                                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Makkah (10 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Maysan Al Massi / Jahara Meysun</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-bus text-[8px] text-emerald-600"></i> Shuttle Service</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2.5 items-start border-t border-slate-100/60 pt-3">
+                                    <i class="fa-solid fa-mosque text-amber-600 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-amber-800 uppercase tracking-wider">Madinah (5 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Dar Abdullah</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-location-dot text-[8px] text-amber-600"></i> 700 Meters</span>
+                                    </div>
+                                </div>
+                            </div>
 
-<!-- =========================================================================
-     PACKAGE 2: 21 Days Economy Package 1 (Direct Flight)
-     ========================================================================= -->
-<div class="w-full bg-white rounded-2xl shadow-sm border border-slate-200/60 overflow-hidden transform transition hover:-translate-y-1 duration-300 opacity-0 animate-reveal-right">
-    <div class="p-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white relative">
-        <div class="absolute top-4 right-4 bg-white text-amber-700 font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            21 Nights Stay
-        </div>
-        <!-- <div class="absolute bottom-4 right-4 bg-amber-400 text-[#0a3022] font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            Direct Flight
-        </div> -->
-        <h3 class="serif-title text-lg font-bold mb-0.5">21 Days Economy Package 1</h3>
-        <p class="text-amber-50/80 text-[11px]">Travel with Us.</p>
-    </div>
-    
-    <!-- Hotels Layout -->
-    <div class="p-3 bg-emerald-50/30 border-b border-slate-100 grid grid-cols-2 gap-4 text-xs">
-        <!-- Makkah Stay -->
-        <div class="flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Maysan Al Massi</span></div>
-                </div>
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Jahara Meysun</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Makkah ( 14 Nights )</span>
-                <span class="text-slate-500 block text-[10px] italic"><i class="fa-solid fa-bus text-[9px] mr-0.5"></i> Shuttle Service Included</span>
-            </div>
-        </div>
-        
-        <!-- Madinah Stay -->
-        <div class="border-l border-slate-200 pl-3 flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Dar Abdullah</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Madinah ( 7 Nights )</span>
-                <span class="text-transparent block text-[10px] select-none">Placeholder</span>
-            </div>
-        </div>
-    </div>
+                            <!-- Pricing Grid -->
+                            <div class="p-4 border-b border-slate-100">
+                                <span class="block text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">PKR Rates Per Person</span>
+                                <div class="grid grid-cols-2 gap-2 text-[11px]">
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Double</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 305,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Triple</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 295,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Quad</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 285,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Sharing</span>
+                                        <span class="text-emerald-800 font-extrabold mt-0.5">Rs. 275,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- Rates & Includes -->
-    <div class="p-4">
-        <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Sharing Rates (PKR)</h4>
-        <div class="space-y-1.5 text-xs sm:text-sm">
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 275,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Quad
-                </span>
-                <span class="font-bold text-slate-900">Rs. 285,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Triple
-                </span>
-                <span class="font-bold text-slate-900">Rs. 295,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Double
-                </span>
-                <span class="font-bold text-emerald-700">Rs. 310,000</span>
-            </div>
-        </div>
-        
-        <div class="mt-3 pt-3 border-t border-slate-100">
-            <h5 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Package Includes</h5>
-            <div class="flex flex-wrap gap-1.5">
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-passport text-[9px]"></i> Umrah Visa</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Air Ticket</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-bus text-[9px]"></i> Hotel Transport</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Direct Flight</span>
-            </div>
-        </div>
-        <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2021%20Days%20Economy%20Package%201" target="_blank" class="w-full mt-4 gold-gradient hover:opacity-90 text-white font-bold text-xs text-center py-2.5 rounded-xl transition-all duration-300 block tracking-wide uppercase shadow-sm">Contact</a>
-    </div>
-</div>
+                        <!-- CTA & Details -->
+                        <div class="p-4 bg-slate-50/30">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Visa</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Ticket</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Transport</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Ziyarat</span>
+                                </div>
+                                <button onclick="openFlyer('WhatsApp Image 2026-07-01 at 1.25.41 PM (7).jpeg')" class="text-[10px] text-amber-600 hover:text-amber-700 font-bold flex items-center gap-0.5 shrink-0 transition">
+                                    <i class="fa-regular fa-image text-xs"></i> Flyer
+                                </button>
+                            </div>
+                            <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2015%20Days%20Direct%20Flight%20Economy%20Package%20(Starting%20from%20Rs.%20275,000)" target="_blank" class="w-full bg-[#0a3022] hover:bg-emerald-800 text-white font-bold text-xs text-center py-2.5 rounded-xl transition duration-300 block tracking-wide uppercase shadow-sm">
+                                Book Package <i class="fa-brands fa-whatsapp ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
 
-<!-- =========================================================================
-     PACKAGE 3: 15 Days Package 1 (Direct Flight)
-     ========================================================================= -->
-<div class="w-full bg-white rounded-2xl shadow-sm border border-slate-200/60 overflow-hidden transform transition hover:-translate-y-1 duration-300 opacity-0 animate-reveal-left">
-    <div class="p-4 emerald-gradient text-white relative">
-        <div class="absolute top-4 right-4 bg-amber-400 text-[#0a3022] font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            15 Nights Stay
-        </div>
-        <div class="absolute bottom-4 right-4 bg-white text-[#0a3022] font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            3 Star Package
-        </div>
-        <h3 class="serif-title text-lg font-bold mb-0.5">15 Days Package 1</h3>
-        <p class="text-emerald-100/80 text-[11px]">Travel with Us.</p>
-    </div>
-    
-    <!-- Hotels Layout -->
-    <div class="p-3 bg-amber-50/50 border-b border-slate-100 grid grid-cols-2 gap-4 text-xs">
-        <!-- Makkah Stay -->
-        <div class="flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Lulu Al Nawair</span></div>
-                </div>
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Badar Al Massa</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Makkah ( 10 Nights )</span>
-            </div>
-        </div>
-        
-        <!-- Madinah Stay -->
-        <div class="border-l border-slate-200 pl-3 flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Safa Al Barakah</span></div>
-                </div>
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Louzin Golden</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Madinah ( 5 Nights )</span>
-            </div>
-        </div>
-    </div>
+                    <!-- Direct Card 2: 15 Days 3-Star -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/50 overflow-hidden transform hover:-translate-y-1 transition duration-300 flex flex-col justify-between relative">
+                        <div class="absolute top-0 right-0 z-10">
+                            <span class="bg-amber-500 text-slate-900 font-bold text-[8px] tracking-wider uppercase px-2.5 py-1 rounded-bl-lg shadow-sm">Recommended</span>
+                        </div>
+                        <div>
+                            <div class="px-5 py-5 emerald-gradient text-white relative">
+                                <div class="absolute -right-4 -bottom-4 text-emerald-800/10 text-6xl font-extrabold select-none"><i class="fa-solid fa-plane"></i></div>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-emerald-900/80 text-emerald-250 border border-emerald-700/50">15 Days</span>
+                                    <span class="text-[9px] uppercase font-extrabold tracking-widest px-2 py-0.5 rounded bg-amber-400 text-[#0a3022]">3 Star</span>
+                                </div>
+                                <h3 class="serif-title text-lg font-bold">15 Days 3-Star</h3>
+                                <p class="text-[10px] text-emerald-100/90 mt-1.5 flex items-center gap-1 font-medium"><i class="fa-solid fa-plane-departure text-[9px] text-amber-400"></i> Airblue, Saudia, Air Sial (Direct)</p>
+                            </div>
 
-    <!-- Rates & Includes -->
-    <div class="p-4">
-        <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Sharing Rates (PKR)</h4>
-        <div class="space-y-1.5 text-xs sm:text-sm">
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Sharing (Quint)
-                </span>
-                <span class="font-bold text-slate-900">Rs. 285,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Quad Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 295,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Triple Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 305,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Double Sharing
-                </span>
-                <span class="font-bold text-emerald-700">Rs. 330,000</span>
-            </div>
-        </div>
-        
-        <div class="mt-3 pt-3 border-t border-slate-100">
-            <h5 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Package Includes</h5>
-            <div class="flex flex-wrap gap-1.5">
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-passport text-[9px]"></i> Umrah Visa</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Direct Air Ticket</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-bus text-[9px]"></i> Hotel Transport</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-hotel mt-0.5 shrink-0 text-xs"></i> Accommodation</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Direct Flight</span>
-            </div>
-        </div>
-        <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2015%20Days%20Package%201" target="_blank" class="w-full mt-4 bg-slate-900 hover:bg-emerald-800 text-white font-bold text-xs text-center py-2.5 rounded-xl transition-all duration-300 block tracking-wide uppercase">Contact</a>
-    </div>
-</div>
+                            <!-- Hotels -->
+                            <div class="p-4 bg-amber-50/20 border-b border-slate-100 space-y-3">
+                                <div class="flex gap-2.5 items-start">
+                                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Makkah (10 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Lulu Al Nawair / Badar Al Massa</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-location-dot text-[8px] text-emerald-600"></i> 600-700 Meters</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2.5 items-start border-t border-slate-100/60 pt-3">
+                                    <i class="fa-solid fa-mosque text-amber-600 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-amber-800 uppercase tracking-wider">Madinah (5 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Safa Al Barkah / Louzin Golden</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-location-dot text-[8px] text-amber-600"></i> Within 700 Meters</span>
+                                    </div>
+                                </div>
+                            </div>
 
-<!-- =========================================================================
-     PACKAGE 4: 21 Days Umrah Package (Direct Flights)
-     ========================================================================= -->
-<div class="w-full bg-white rounded-2xl shadow-sm border border-slate-200/60 overflow-hidden transform transition hover:-translate-y-1 duration-300 opacity-0 animate-reveal-right">
-    <div class="p-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white relative">
-        <div class="absolute top-4 right-4 bg-white text-amber-700 font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            21 Nights Stay
-        </div>
-        <div class="absolute bottom-4 right-4 bg-amber-400 text-[#0a3022] font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            3 Star Package
-        </div>
-        <h3 class="serif-title text-lg font-bold mb-0.5">21 Days Package 1</h3>
-        <p class="text-amber-50/80 text-[11px]">Travel with Us.</p>
-    </div>
-    
-    <!-- Hotels Layout -->
-    <div class="p-3 bg-emerald-50/30 border-b border-slate-100 grid grid-cols-2 gap-4 text-xs">
-        <!-- Makkah Stay -->
-        <div class="flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Lulu Al Nawair</span></div>
-                </div>
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Badar Al Massa</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Makkah ( 14 Nights )</span>
-            </div>
-        </div>
-        
-        <!-- Madinah Stay -->
-        <div class="border-l border-slate-200 pl-3 flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Safa Al Barkah</span></div>
-                </div>
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Louzin Golden</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Madinah ( 7 Nights )</span>
-            </div>
-        </div>
-    </div>
+                            <!-- Pricing Grid -->
+                            <div class="p-4 border-b border-slate-100">
+                                <span class="block text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">PKR Rates Per Person</span>
+                                <div class="grid grid-cols-2 gap-2 text-[11px]">
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Double</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 340,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Triple</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 315,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Quad</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 305,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Sharing</span>
+                                        <span class="text-emerald-800 font-extrabold mt-0.5">Rs. 295,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- Rates & Includes -->
-    <div class="p-4">
-        <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Sharing Rates (PKR)</h4>
-        <div class="space-y-1.5 text-xs sm:text-sm">
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Sharing (Quint)
-                </span>
-                <span class="font-bold text-slate-900">Rs. 300,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Quad Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 310,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Triple Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 330,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1">
-                <span class="font-medium text-slate-600 flex items-center gap-1">
-                    <span class="flex gap-0.5 text-[10px] text-slate-400"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Double Sharing
-                </span>
-                <span class="font-bold text-emerald-700">Rs. 365,000</span>
-            </div>
-        </div>
-        
-        <div class="mt-3 pt-3 border-t border-slate-100">
-            <h5 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Package Includes</h5>
-            <div class="flex flex-wrap gap-1.5">
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-passport text-[9px]"></i> Umrah Visa</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Direct Air Ticket</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-bus text-[9px]"></i> Hotel Transport</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-hotel mt-0.5 shrink-0 text-xs"></i> Accommodation</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Direct Flight</span>
-            </div>
-        </div>
-        <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2021%20Days%20Package%201" target="_blank" class="w-full mt-4 gold-gradient hover:opacity-90 text-white font-bold text-xs text-center py-2.5 rounded-xl transition-all duration-300 block tracking-wide uppercase shadow-sm">Contact</a>
-    </div>
-</div>
+                        <!-- CTA & Details -->
+                        <div class="p-4 bg-slate-50/30">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Visa</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Ticket</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Transport</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">3★ Hotel</span>
+                                </div>
+                                <button onclick="openFlyer('WhatsApp Image 2026-07-01 at 1.25.41 PM (6).jpeg')" class="text-[10px] text-amber-600 hover:text-amber-700 font-bold flex items-center gap-0.5 shrink-0 transition">
+                                    <i class="fa-regular fa-image text-xs"></i> Flyer
+                                </button>
+                            </div>
+                            <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2015%20Days%20Direct%20Flight%203-Star%20Package%20(Starting%20from%20Rs.%20295,000)" target="_blank" class="w-full bg-[#0a3022] hover:bg-emerald-800 text-white font-bold text-xs text-center py-2.5 rounded-xl transition duration-300 block tracking-wide uppercase shadow-sm">
+                                Book Package <i class="fa-brands fa-whatsapp ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
 
-<!-- =========================================================================
-     PACKAGE 5: 21 Days Umrah Package (Indirect Flights)
-     ========================================================================= -->
-<div class="w-full bg-white rounded-2xl shadow-sm border border-slate-200/60 overflow-hidden transform transition hover:-translate-y-1 duration-300 opacity-0 animate-reveal-left">
-    <div class="p-4 emerald-gradient text-white relative">
-        <div class="absolute top-4 right-4 bg-amber-400 text-[#0a3022] font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            21 Nights Stay
-        </div>
-        <div class="absolute bottom-4 right-4 bg-white text-[#0a3022] font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            3 Star Package
-        </div>
-        <h3 class="serif-title text-lg font-bold mb-0.5">21 Days Package 2</h3>
-        <p class="text-emerald-100/80 text-[11px]">Travel with Us.</p>
-    </div>
-    
-    <!-- Hotels Layout -->
-    <div class="p-3 bg-amber-50/50 border-b border-slate-100 grid grid-cols-2 gap-4 text-xs">
-        <!-- Makkah Stay -->
-        <div class="flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Lulu Al Nawair</span></div>
-                </div>
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Badar Al Massa</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Makkah ( 14 Nights )</span>
-            </div>
-        </div>
-        
-        <!-- Madinah Stay -->
-        <div class="border-l border-slate-200 pl-3 flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Safa Al Barakah</span></div>
-                </div>
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Louzin Golden</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Madinah ( 7 Nights )</span>
-            </div>
-        </div>
-    </div>
+                    <!-- Direct Card 3: 21 Days Economy -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/50 overflow-hidden transform hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="px-5 py-5 emerald-gradient text-white relative">
+                                <div class="absolute -right-4 -bottom-4 text-emerald-800/10 text-6xl font-extrabold select-none"><i class="fa-solid fa-plane"></i></div>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-emerald-900/80 text-emerald-250 border border-emerald-700/50">21 Days</span>
+                                    <span class="text-[9px] uppercase font-extrabold tracking-widest px-2 py-0.5 rounded bg-amber-400 text-[#0a3022]">Economy</span>
+                                </div>
+                                <h3 class="serif-title text-lg font-bold">21 Days Economy</h3>
+                                <p class="text-[10px] text-emerald-100/90 mt-1.5 flex items-center gap-1 font-medium"><i class="fa-solid fa-plane-departure text-[9px] text-amber-400"></i> Airblue, Air Sial, Saudia (Direct)</p>
+                            </div>
 
-    <!-- Rates & Includes -->
-    <div class="p-4">
-        <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Sharing Rates (PKR)</h4>
-        <div class="space-y-1.5 text-xs sm:text-sm">
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Sharing (Quint)
-                </span>
-                <span class="font-bold text-slate-900">Rs. 265,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Quad Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 275,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Triple Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 295,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Double Sharing
-                </span>
-                <span class="font-bold text-emerald-700">Rs. 330,000</span>
-            </div>
-        </div>
-        
-        <div class="mt-3 pt-3 border-t border-slate-100">
-            <h5 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Package Includes</h5>
-            <div class="flex flex-wrap gap-1.5">
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-passport text-[9px]"></i> Umrah Visa</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Indirect Air Ticket</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-bus text-[9px]"></i> Hotel Transport</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-hotel mt-0.5 shrink-0 text-xs"></i> Accommodation</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Indirect Flight</span>
-            </div>
-        </div>
-        <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2021%20Days%20Package%202" target="_blank" class="w-full mt-4 bg-slate-900 hover:bg-emerald-800 text-white font-bold text-xs text-center py-2.5 rounded-xl transition-all duration-300 block tracking-wide uppercase">Contact</a>
-    </div>
-</div>
+                            <!-- Hotels -->
+                            <div class="p-4 bg-amber-50/20 border-b border-slate-100 space-y-3">
+                                <div class="flex gap-2.5 items-start">
+                                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Makkah (14 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Maysan Al Massi / Jahara Meysun</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-bus text-[8px] text-emerald-600"></i> Shuttle Service</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2.5 items-start border-t border-slate-100/60 pt-3">
+                                    <i class="fa-solid fa-mosque text-amber-600 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-amber-800 uppercase tracking-wider">Madinah (7 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Dar Abdullah</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-location-dot text-[8px] text-amber-600"></i> 700 Meters</span>
+                                    </div>
+                                </div>
+                            </div>
 
-<!-- =========================================================================
-     PACKAGE 6: 15 Days Umrah Package (Indirect Flights)
-     ========================================================================= -->
-<div class="w-full bg-white rounded-2xl shadow-sm border border-slate-200/60 overflow-hidden transform transition hover:-translate-y-1 duration-300 opacity-0 animate-reveal-right">
-    <div class="p-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white relative">
-        <div class="absolute top-4 right-4 bg-white text-amber-700 font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            15 Nights Stay
-        </div>
-        <div class="absolute bottom-4 right-4 bg-amber-400 text-[#0a3022] font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            3 Star Package
-        </div>
-        <h3 class="serif-title text-lg font-bold mb-0.5">15 Days Package 2</h3>
-        <p class="text-amber-50/80 text-[11px]">Travel with Us.</p>
-    </div>
-    
-    <!-- Hotels Layout -->
-    <div class="p-3 bg-emerald-50/30 border-b border-slate-100 grid grid-cols-2 gap-4 text-xs">
-        <!-- Makkah Stay -->
-        <div class="flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Lulu Al Nawair</span></div>
-                </div>
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Badar Al Massa</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Makkah ( 10 Nights )</span>
-            </div>
-        </div>
-        
-        <!-- Madinah Stay -->
-        <div class="border-l border-slate-200 pl-3 flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Safa Al Barakah</span></div>
-                </div>
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Louzin Golden</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Madinah ( 7 Nights )</span>
-            </div>
-        </div>
-    </div>
+                            <!-- Pricing Grid -->
+                            <div class="p-4 border-b border-slate-100">
+                                <span class="block text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">PKR Rates Per Person</span>
+                                <div class="grid grid-cols-2 gap-2 text-[11px]">
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Double</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 320,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Triple</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 305,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Quad</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 295,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Sharing</span>
+                                        <span class="text-emerald-800 font-extrabold mt-0.5">Rs. 285,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- Rates & Includes -->
-    <div class="p-4">
-        <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Sharing Rates (PKR)</h4>
-        <div class="space-y-1.5 text-xs sm:text-sm">
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Sharing (Quint)
-                </span>
-                <span class="font-bold text-slate-900">Rs. 250,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Quad Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 260,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Triple Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 270,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Double Sharing
-                </span>
-                <span class="font-bold text-emerald-700">Rs. 295,000</span>
-            </div>
-        </div>
-        
-        <div class="mt-3 pt-3 border-t border-slate-100">
-            <h5 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Package Includes</h5>
-            <div class="flex flex-wrap gap-1.5">
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-passport text-[9px]"></i> Umrah Visa</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Indirect Air Ticket</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-bus text-[9px]"></i> Hotel Transport</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-hotel mt-0.5 shrink-0 text-xs"></i> Accommodation</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Indirect Flight</span>
-            </div>
-        </div>
-        <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2015%20Days%20Package%202" target="_blank" class="w-full mt-4 gold-gradient hover:opacity-90 text-white font-bold text-xs text-center py-2.5 rounded-xl transition-all duration-300 block tracking-wide uppercase shadow-sm">Contact</a>
-    </div>
-</div>
+                        <!-- CTA & Details -->
+                        <div class="p-4 bg-slate-50/30">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Visa</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Ticket</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Transport</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Ziyarat</span>
+                                </div>
+                                <button onclick="openFlyer('WhatsApp Image 2026-07-01 at 1.25.41 PM.jpeg')" class="text-[10px] text-amber-600 hover:text-amber-700 font-bold flex items-center gap-0.5 shrink-0 transition">
+                                    <i class="fa-regular fa-image text-xs"></i> Flyer
+                                </button>
+                            </div>
+                            <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2021%20Days%20Direct%20Flight%20Economy%20Package%20(Starting%20from%20Rs.%20285,000)" target="_blank" class="w-full bg-[#0a3022] hover:bg-emerald-800 text-white font-bold text-xs text-center py-2.5 rounded-xl transition duration-300 block tracking-wide uppercase shadow-sm">
+                                Book Package <i class="fa-brands fa-whatsapp ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
 
-<!-- =========================================================================
-     PACKAGE 7: 15 Days Economy Package 2 (Indirect Flight)
-     ========================================================================= -->
-<div class="w-full bg-white rounded-2xl shadow-sm border border-slate-200/60 overflow-hidden transform transition hover:-translate-y-1 duration-300 opacity-0 animate-reveal-left">
-    <div class="p-4 emerald-gradient text-white relative">
-        <div class="absolute top-4 right-4 bg-amber-400 text-[#0a3022] font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            15 Nights Stay
-        </div>
-        <!-- <div class="absolute bottom-4 right-4 bg-white text-[#0a3022] font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            Indirect Flight
-        </div> -->
-        <h3 class="serif-title text-lg font-bold mb-0.5">15 Days Economy Package 2</h3>
-        <p class="text-emerald-100/80 text-[11px]">Travel with Us.</p>
-    </div>
-    
-    <!-- Hotels Layout -->
-    <div class="p-3 bg-amber-50/50 border-b border-slate-100 grid grid-cols-2 gap-4 text-xs">
-        <!-- Makkah Stay -->
-        <div class="flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Maysan Al Massi</span></div>
-                </div>
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Jahara Meysun</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Makkah ( 10 Nights )</span>
-                <span class="text-slate-500 block text-[10px] italic"><i class="fa-solid fa-bus text-[9px] mr-0.5"></i> Shuttle Service Included</span>
-            </div>
-        </div>
-        
-        <!-- Madinah Stay -->
-        <div class="border-l border-slate-200 pl-3 flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Dar Abdullah</span></div>
-                </div>
-            </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Madinah ( 5 Nights )</span>
-                <span class="text-transparent block text-[10px] select-none">Placeholder</span>
-            </div>
-        </div>
-    </div>
+                    <!-- Direct Card 4: 21 Days 3-Star -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/50 overflow-hidden transform hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="px-5 py-5 emerald-gradient text-white relative">
+                                <div class="absolute -right-4 -bottom-4 text-emerald-800/10 text-6xl font-extrabold select-none"><i class="fa-solid fa-plane"></i></div>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-emerald-900/80 text-emerald-250 border border-emerald-700/50">21 Days</span>
+                                    <span class="text-[9px] uppercase font-extrabold tracking-widest px-2 py-0.5 rounded bg-amber-400 text-[#0a3022]">3 Star</span>
+                                </div>
+                                <h3 class="serif-title text-lg font-bold">21 Days 3-Star</h3>
+                                <p class="text-[10px] text-emerald-100/90 mt-1.5 flex items-center gap-1 font-medium"><i class="fa-solid fa-plane-departure text-[9px] text-amber-400"></i> Airblue, Saudia, Air Sial (Direct)</p>
+                            </div>
 
-    <!-- Rates & Includes -->
-    <div class="p-4">
-        <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Sharing Rates (PKR)</h4>
-        <div class="space-y-1.5 text-xs sm:text-sm">
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 235,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Quad Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 245,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Triple Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 255,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Double Sharing
-                </span>
-                <span class="font-bold text-emerald-700">Rs. 265,000</span>
-            </div>
-        </div>
-        
-        <div class="mt-3 pt-3 border-t border-slate-100">
-            <h5 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Package Includes</h5>
-            <div class="flex flex-wrap gap-1.5">
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-passport text-[9px]"></i> Umrah Visa</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Air Ticket</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-bus text-[9px]"></i> Hotel Transport</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Indirect Flight</span>
-            </div>
-        </div>
-        <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2015%20Days%20Economy%20Package%202" target="_blank" class="w-full mt-4 bg-slate-900 hover:bg-emerald-800 text-white font-bold text-xs text-center py-2.5 rounded-xl transition-all duration-300 block tracking-wide uppercase">Contact</a>
-    </div>
-</div>
+                            <!-- Hotels -->
+                            <div class="p-4 bg-amber-50/20 border-b border-slate-100 space-y-3">
+                                <div class="flex gap-2.5 items-start">
+                                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Makkah (14 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Lulu Al Nawair / Badar Al Massa</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-location-dot text-[8px] text-emerald-600"></i> 600-700 Meters</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2.5 items-start border-t border-slate-100/60 pt-3">
+                                    <i class="fa-solid fa-mosque text-amber-600 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-amber-800 uppercase tracking-wider">Madinah (7 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Safa Al Barkah / Louzin Golden</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-location-dot text-[8px] text-amber-600"></i> Within 700 Meters</span>
+                                    </div>
+                                </div>
+                            </div>
 
-<!-- =========================================================================
-     PACKAGE 8: 21 Days Economy Package 2 (Indirect Flight)
-     ========================================================================= -->
-<div class="w-full bg-white rounded-2xl shadow-sm border border-slate-200/60 overflow-hidden transform transition hover:-translate-y-1 duration-300 opacity-0 animate-reveal-right">
-    <div class="p-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white relative">
-        <div class="absolute top-4 right-4 bg-white text-amber-700 font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            21 Nights Stay
-        </div>
-        <!-- <div class="absolute bottom-4 right-4 bg-amber-400 text-[#0a3022] font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-sm">
-            Indirect Flight
-        </div> -->
-        <h3 class="serif-title text-lg font-bold mb-0.5">21 Days Economy Package 2</h3>
-        <p class="text-amber-50/80 text-[11px]">Travel with Us.</p>
-    </div>
-    
-    <!-- Hotels Layout -->
-    <div class="p-3 bg-emerald-50/30 border-b border-slate-100 grid grid-cols-2 gap-4 text-xs">
-        <!-- Makkah Stay -->
-        <div class="flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Maysan Al Massi</span></div>
-                </div>
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Jahara Meysun</span></div>
+                            <!-- Pricing Grid -->
+                            <div class="p-4 border-b border-slate-100">
+                                <span class="block text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">PKR Rates Per Person</span>
+                                <div class="grid grid-cols-2 gap-2 text-[11px]">
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Double</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 375,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Triple</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 340,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Quad</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 320,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Sharing</span>
+                                        <span class="text-emerald-800 font-extrabold mt-0.5">Rs. 310,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA & Details -->
+                        <div class="p-4 bg-slate-50/30">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Visa</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Ticket</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Transport</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">3★ Hotel</span>
+                                </div>
+                                <button onclick="openFlyer('WhatsApp Image 2026-07-01 at 1.25.41 PM (1).jpeg')" class="text-[10px] text-amber-600 hover:text-amber-700 font-bold flex items-center gap-0.5 shrink-0 transition">
+                                    <i class="fa-regular fa-image text-xs"></i> Flyer
+                                </button>
+                            </div>
+                            <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2021%20Days%20Direct%20Flight%203-Star%20Package%20(Starting%20from%20Rs.%20310,000)" target="_blank" class="w-full bg-[#0a3022] hover:bg-emerald-800 text-white font-bold text-xs text-center py-2.5 rounded-xl transition duration-300 block tracking-wide uppercase shadow-sm">
+                                Book Package <i class="fa-brands fa-whatsapp ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Makkah ( 14 Nights )</span>
-                <span class="text-slate-500 block text-[10px] italic"><i class="fa-solid fa-bus text-[9px] mr-0.5"></i> Shuttle Service Included</span>
-            </div>
-        </div>
-        
-        <!-- Madinah Stay -->
-        <div class="border-l border-slate-200 pl-3 flex flex-col h-full justify-between">
-            <div class="space-y-2">
-                <div class="flex gap-2 items-start">
-                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
-                    <div><span class="block font-bold text-slate-800">Dar Abdullah</span></div>
+
+            <!-- Tab Content Indirect Flights -->
+            <div id="tab-content-indirect" class="hidden transition-all duration-300 opacity-0 scale-95">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                    
+                    <!-- Indirect Card 1: 15 Days Economy -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/50 overflow-hidden transform hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="px-5 py-5 emerald-gradient text-white relative">
+                                <div class="absolute -right-4 -bottom-4 text-emerald-800/10 text-6xl font-extrabold select-none"><i class="fa-solid fa-plane"></i></div>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-emerald-900/80 text-emerald-250 border border-emerald-700/50">15 Days</span>
+                                    <span class="text-[9px] uppercase font-extrabold tracking-widest px-2 py-0.5 rounded bg-amber-400 text-[#0a3022]">Economy</span>
+                                </div>
+                                <h3 class="serif-title text-lg font-bold">15 Days Economy</h3>
+                                <p class="text-[10px] text-emerald-100/90 mt-1.5 flex items-center gap-1 font-medium"><i class="fa-solid fa-plane-departure text-[9px] text-amber-400"></i> FlyJinnah, SalamAir, PIA, AirArabia</p>
+                            </div>
+
+                            <!-- Hotels -->
+                            <div class="p-4 bg-amber-50/20 border-b border-slate-100 space-y-3">
+                                <div class="flex gap-2.5 items-start">
+                                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Makkah (10 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Maysan Al Massi / Jahara Meysun</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-bus text-[8px] text-emerald-600"></i> Shuttle Service</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2.5 items-start border-t border-slate-100/60 pt-3">
+                                    <i class="fa-solid fa-mosque text-amber-600 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-amber-800 uppercase tracking-wider">Madinah (5 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Dar Abdullah</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-location-dot text-[8px] text-amber-600"></i> 700 Meters</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pricing Grid -->
+                            <div class="p-4 border-b border-slate-100">
+                                <span class="block text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">PKR Rates Per Person</span>
+                                <div class="grid grid-cols-2 gap-2 text-[11px]">
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Double</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 275,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Triple</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 265,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Quad</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 255,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Sharing</span>
+                                        <span class="text-emerald-800 font-extrabold mt-0.5">Rs. 245,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA & Details -->
+                        <div class="p-4 bg-slate-50/30">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Visa</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Ticket</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Transport</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Ziyarat</span>
+                                </div>
+                                <button onclick="openFlyer('WhatsApp Image 2026-07-01 at 1.25.41 PM (3).jpeg')" class="text-[10px] text-amber-600 hover:text-amber-700 font-bold flex items-center gap-0.5 shrink-0 transition">
+                                    <i class="fa-regular fa-image text-xs"></i> Flyer
+                                </button>
+                            </div>
+                            <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2015%20Days%20Indirect%20Flight%20Economy%20Package%20(Starting%20from%20Rs.%20245,000)" target="_blank" class="w-full bg-[#0a3022] hover:bg-emerald-800 text-white font-bold text-xs text-center py-2.5 rounded-xl transition duration-300 block tracking-wide uppercase shadow-sm">
+                                Book Package <i class="fa-brands fa-whatsapp ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Indirect Card 2: 15 Days 3-Star -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/50 overflow-hidden transform hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="px-5 py-5 emerald-gradient text-white relative">
+                                <div class="absolute -right-4 -bottom-4 text-emerald-800/10 text-6xl font-extrabold select-none"><i class="fa-solid fa-plane"></i></div>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-emerald-900/80 text-emerald-250 border border-emerald-700/50">15 Days</span>
+                                    <span class="text-[9px] uppercase font-extrabold tracking-widest px-2 py-0.5 rounded bg-amber-400 text-[#0a3022]">3 Star</span>
+                                </div>
+                                <h3 class="serif-title text-lg font-bold">15 Days 3-Star</h3>
+                                <p class="text-[10px] text-emerald-100/90 mt-1.5 flex items-center gap-1 font-medium"><i class="fa-solid fa-plane-departure text-[9px] text-amber-400"></i> FlyJinnah, SalamAir, PIA, AirArabia</p>
+                            </div>
+
+                            <!-- Hotels -->
+                            <div class="p-4 bg-amber-50/20 border-b border-slate-100 space-y-3">
+                                <div class="flex gap-2.5 items-start">
+                                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Makkah (10 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Lulu Al Nawair / Badar Al Massa</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-location-dot text-[8px] text-emerald-600"></i> 600-700 Meters</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2.5 items-start border-t border-slate-100/60 pt-3">
+                                    <i class="fa-solid fa-mosque text-amber-650 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-amber-800 uppercase tracking-wider">Madinah (5 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Safa Al Barkah / Louzin Golden</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-location-dot text-[8px] text-emerald-600"></i> Within 700 Meters</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pricing Grid -->
+                            <div class="p-4 border-b border-slate-100">
+                                <span class="block text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">PKR Rates Per Person</span>
+                                <div class="grid grid-cols-2 gap-2 text-[11px]">
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Double</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 305,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Triple</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 280,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Quad</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 270,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Sharing</span>
+                                        <span class="text-emerald-800 font-extrabold mt-0.5">Rs. 260,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA & Details -->
+                        <div class="p-4 bg-slate-50/30">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Visa</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Ticket</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Transport</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">3★ Hotel</span>
+                                </div>
+                                <button onclick="openFlyer('WhatsApp Image 2026-07-01 at 1.25.41 PM (2).jpeg')" class="text-[10px] text-amber-600 hover:text-amber-700 font-bold flex items-center gap-0.5 shrink-0 transition">
+                                    <i class="fa-regular fa-image text-xs"></i> Flyer
+                                </button>
+                            </div>
+                            <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2015%20Days%20Indirect%20Flight%203-Star%20Package%20(Starting%20from%20Rs.%20260,000)" target="_blank" class="w-full bg-[#0a3022] hover:bg-emerald-800 text-white font-bold text-xs text-center py-2.5 rounded-xl transition duration-300 block tracking-wide uppercase shadow-sm">
+                                Book Package <i class="fa-brands fa-whatsapp ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Indirect Card 3: 21 Days Economy -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/50 overflow-hidden transform hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="px-5 py-5 emerald-gradient text-white relative">
+                                <div class="absolute -right-4 -bottom-4 text-emerald-800/10 text-6xl font-extrabold select-none"><i class="fa-solid fa-plane"></i></div>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-emerald-900/80 text-emerald-250 border border-emerald-700/50">21 Days</span>
+                                    <span class="text-[9px] uppercase font-extrabold tracking-widest px-2 py-0.5 rounded bg-amber-400 text-[#0a3022]">Economy</span>
+                                </div>
+                                <h3 class="serif-title text-lg font-bold">21 Days Economy</h3>
+                                <p class="text-[10px] text-emerald-100/90 mt-1.5 flex items-center gap-1 font-medium"><i class="fa-solid fa-plane-departure text-[9px] text-amber-400"></i> FlyJinnah, SalamAir, PIA, AirArabia</p>
+                            </div>
+
+                            <!-- Hotels -->
+                            <div class="p-4 bg-amber-50/20 border-b border-slate-100 space-y-3">
+                                <div class="flex gap-2.5 items-start">
+                                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Makkah (14 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Maysan Al Massi / Jahara Meysun</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-bus text-[8px] text-emerald-600"></i> Shuttle Service</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2.5 items-start border-t border-slate-100/60 pt-3">
+                                    <i class="fa-solid fa-mosque text-amber-600 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-amber-800 uppercase tracking-wider">Madinah (7 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Dar Abdullah</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-location-dot text-[8px] text-amber-600"></i> 700 Meters</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pricing Grid -->
+                            <div class="p-4 border-b border-slate-100">
+                                <span class="block text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">PKR Rates Per Person</span>
+                                <div class="grid grid-cols-2 gap-2 text-[11px]">
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Double</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 290,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Triple</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 275,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Quad</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 265,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Sharing</span>
+                                        <span class="text-emerald-800 font-extrabold mt-0.5">Rs. 255,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA & Details -->
+                        <div class="p-4 bg-slate-50/30">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Visa</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Ticket</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Transport</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Ziyarat</span>
+                                </div>
+                                <button onclick="openFlyer('WhatsApp Image 2026-07-01 at 1.25.41 PM (4).jpeg')" class="text-[10px] text-amber-600 hover:text-amber-700 font-bold flex items-center gap-0.5 shrink-0 transition">
+                                    <i class="fa-regular fa-image text-xs"></i> Flyer
+                                </button>
+                            </div>
+                            <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2021%20Days%20Indirect%20Flight%20Economy%20Package%20(Starting%20from%20Rs.%20255,000)" target="_blank" class="w-full bg-[#0a3022] hover:bg-emerald-800 text-white font-bold text-xs text-center py-2.5 rounded-xl transition duration-300 block tracking-wide uppercase shadow-sm">
+                                Book Package <i class="fa-brands fa-whatsapp ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Indirect Card 4: 21 Days 3-Star -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200/50 overflow-hidden transform hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="px-5 py-5 emerald-gradient text-white relative">
+                                <div class="absolute -right-4 -bottom-4 text-emerald-800/10 text-6xl font-extrabold select-none"><i class="fa-solid fa-plane"></i></div>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-emerald-900/80 text-emerald-250 border border-emerald-700/50">21 Days</span>
+                                    <span class="text-[9px] uppercase font-extrabold tracking-widest px-2 py-0.5 rounded bg-amber-400 text-[#0a3022]">3 Star</span>
+                                </div>
+                                <h3 class="serif-title text-lg font-bold">21 Days 3-Star</h3>
+                                <p class="text-[10px] text-emerald-100/90 mt-1.5 flex items-center gap-1 font-medium"><i class="fa-solid fa-plane-departure text-[9px] text-amber-400"></i> FlyJinnah, SalamAir, PIA, AirArabia</p>
+                            </div>
+
+                            <!-- Hotels -->
+                            <div class="p-4 bg-amber-50/20 border-b border-slate-100 space-y-3">
+                                <div class="flex gap-2.5 items-start">
+                                    <i class="fa-solid fa-hotel text-emerald-700 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Makkah (14 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Lulu Al Nawair / Badar Al Massa</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-location-dot text-[8px] text-emerald-600"></i> 600-700 Meters</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2.5 items-start border-t border-slate-100/60 pt-3">
+                                    <i class="fa-solid fa-mosque text-amber-650 mt-0.5 shrink-0 text-xs"></i>
+                                    <div>
+                                        <span class="block text-[9px] font-bold text-amber-800 uppercase tracking-wider">Madinah (7 Nights)</span>
+                                        <span class="block text-xs font-semibold text-slate-800 mt-0.5">Safa Al Barkah / Louzin Golden</span>
+                                        <span class="inline-flex items-center gap-0.5 text-[9px] text-slate-500 mt-1 bg-white px-1.5 py-0.5 rounded border border-slate-100"><i class="fa-solid fa-location-dot text-[8px] text-emerald-600"></i> Within 700 Meters</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pricing Grid -->
+                            <div class="p-4 border-b border-slate-100">
+                                <span class="block text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">PKR Rates Per Person</span>
+                                <div class="grid grid-cols-2 gap-2 text-[11px]">
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Double</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 340,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Triple</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 305,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Quad</span>
+                                        <span class="text-slate-900 font-bold mt-0.5">Rs. 285,000</span>
+                                    </div>
+                                    <div class="bg-slate-50/70 p-2 rounded border border-slate-100 flex flex-col">
+                                        <span class="text-slate-500 font-medium">Sharing</span>
+                                        <span class="text-emerald-800 font-extrabold mt-0.5">Rs. 275,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA & Details -->
+                        <div class="p-4 bg-slate-50/30">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Visa</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Ticket</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">Transport</span>
+                                    <span class="text-[8px] font-medium bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded">3★ Hotel</span>
+                                </div>
+                                <button onclick="openFlyer('WhatsApp Image 2026-07-01 at 1.25.41 PM (5).jpeg')" class="text-[10px] text-amber-600 hover:text-amber-700 font-bold flex items-center gap-0.5 shrink-0 transition">
+                                    <i class="fa-regular fa-image text-xs"></i> Flyer
+                                </button>
+                            </div>
+                            <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2021%20Days%20Indirect%20Flight%203-Star%20Package%20(Starting%20from%20Rs.%20275,000)" target="_blank" class="w-full bg-[#0a3022] hover:bg-emerald-850 text-white font-bold text-xs text-center py-2.5 rounded-xl transition duration-300 block tracking-wide uppercase shadow-sm">
+                                Book Package <i class="fa-brands fa-whatsapp ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="mt-auto pt-2 border-t border-dashed border-slate-200">
-                <span class="text-emerald-800 block font-bold text-[11px]">Madinah ( 7 Nights )</span>
-                <span class="text-transparent block text-[10px] select-none">Placeholder</span>
-            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Rates & Includes -->
-    <div class="p-4">
-        <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Sharing Rates (PKR)</h4>
-        <div class="space-y-1.5 text-xs sm:text-sm">
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 245,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Quad Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 255,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1 border-b border-slate-100">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Triple Sharing
-                </span>
-                <span class="font-bold text-slate-900">Rs. 265,000</span>
-            </div>
-            <div class="flex justify-between items-center py-1">
-                <span class="font-medium text-slate-600 flex items-center gap-1.5">
-                    <span class="flex items-center text-slate-400 text-[10px] gap-0.5"><i class="fa-solid fa-user"></i><i class="fa-solid fa-user"></i></span> Double Sharing
-                </span>
-                <span class="font-bold text-emerald-700">Rs. 280,000</span>
-            </div>
-        </div>
-        
-        <div class="mt-3 pt-3 border-t border-slate-100">
-            <h5 class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Package Includes</h5>
-            <div class="flex flex-wrap gap-1.5">
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-passport text-[9px]"></i> Umrah Visa</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Air Ticket</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-bus text-[9px]"></i> Hotel Transport</span>
-                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100/50"><i class="fa-solid fa-ticket text-[9px]"></i> Indirect Flight</span>
-            </div>
-        </div>
-        <a href="https://wa.me/923061379605?text=Salam,%20I%20am%20interested%20in%20the%2021%20Days%20Economy%20Package%202" target="_blank" class="w-full mt-4 gold-gradient hover:opacity-90 text-white font-bold text-xs text-center py-2.5 rounded-xl transition-all duration-300 block tracking-wide uppercase shadow-sm">Contact</a>
-    </div>
-</div>
-
-            </div>
-        </div>
-    <!-- </section> -->
-
-    <!-- Detailed Accommodations Spotlight -->
+<!-- Detailed Accommodations Spotlight -->
     <!-- <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16 opacity-0 animate-reveal-up">
@@ -1074,13 +957,92 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button (Bottom Right) -->
-    <a href="https://wa.me/+923061379605?text=Salam,%20I%20am%20interested%20in%20Umrah%20Packages." 
-       target="_blank" 
-       class="fixed bottom-6 right-6 z-50 bg-[#25d366] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-[#20ba5a] transition duration-300 animate-whatsapp"
-       aria-label="Contact us on WhatsApp">
-         <i class="fa-brands fa-whatsapp"></i>
-    </a>
+        <!-- Image Flyer Modal -->
+    <div id="flyer-modal" class="fixed inset-0 z-[100] hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-5 relative shadow-2xl animate-scale-in">
+            <button onclick="closeFlyer()" class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-lg hover:bg-slate-800 transition">
+                <i class="fa-solid fa-xmark text-xs"></i>
+            </button>
+            <div class="text-center mb-3">
+                <h4 id="flyer-title" class="font-bold text-slate-800 text-sm">Package Flyer</h4>
+            </div>
+            <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 flex items-center justify-center">
+                <img id="flyer-image" src="" alt="Flyer Image" class="max-h-[75vh] w-auto object-contain">
+            </div>
+        </div>
+    </div>
 
+    <!-- Tab Toggling & Flyer Modal Script -->
+    <script>
+        function switchTab(type) {
+            const directBtn = document.getElementById('tab-btn-direct');
+            const indirectBtn = document.getElementById('tab-btn-indirect');
+            const directContent = document.getElementById('tab-content-direct');
+            const indirectContent = document.getElementById('tab-content-indirect');
+            
+            if (type === 'direct') {
+                // Style Active Button
+                directBtn.className = 'flex-1 py-3 px-6 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition duration-300 shadow-sm bg-[#0a3022] text-white';
+                
+                indirectBtn.className = 'flex-1 py-3 px-6 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition duration-300 text-slate-600 hover:text-slate-900 hover:bg-white/50';
+                
+                // Toggle Content
+                indirectContent.classList.add('hidden');
+                indirectContent.classList.remove('opacity-100', 'scale-100');
+                indirectContent.classList.add('opacity-0', 'scale-95');
+                
+                directContent.classList.remove('hidden');
+                setTimeout(() => {
+                    directContent.classList.remove('opacity-0', 'scale-95');
+                    directContent.classList.add('opacity-100', 'scale-100');
+                }, 50);
+            } else {
+                // Style Active Button
+                indirectBtn.className = 'flex-1 py-3 px-6 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition duration-300 shadow-sm bg-[#0a3022] text-white';
+                
+                directBtn.className = 'flex-1 py-3 px-6 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition duration-300 text-slate-600 hover:text-slate-900 hover:bg-white/50';
+                
+                // Toggle Content
+                directContent.classList.add('hidden');
+                directContent.classList.remove('opacity-100', 'scale-100');
+                directContent.classList.add('opacity-0', 'scale-95');
+                
+                indirectContent.classList.remove('hidden');
+                setTimeout(() => {
+                    indirectContent.classList.remove('opacity-0', 'scale-95');
+                    indirectContent.classList.add('opacity-100', 'scale-100');
+                }, 50);
+            }
+        }
+
+        function openFlyer(imageName) {
+            const modal = document.getElementById('flyer-modal');
+            const flyerImg = document.getElementById('flyer-image');
+            const flyerTitle = document.getElementById('flyer-title');
+            
+            flyerImg.src = 'New/' + imageName;
+            // Clean up name for display
+            flyerTitle.textContent = "Original Flyer - " + (imageName.includes(' (1).jpeg') ? '21 Days 3 Star' : imageName.includes(' (2).jpeg') ? '15 Days 3 Star' : imageName.includes(' (3).jpeg') ? '15 Days Economy' : imageName.includes(' (4).jpeg') ? '21 Days Economy' : imageName.includes(' (5).jpeg') ? '21 Days 3 Star' : imageName.includes(' (6).jpeg') ? '15 Days 3 Star' : imageName.includes(' (7).jpeg') ? '15 Days Economy' : '21 Days Economy');
+            modal.classList.remove('hidden');
+        }
+        
+        function closeFlyer() {
+            const modal = document.getElementById('flyer-modal');
+            modal.classList.add('hidden');
+        }
+        
+        // Close modal on escape key or clicking outside
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeFlyer();
+            }
+        });
+        document.getElementById('flyer-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeFlyer();
+            }
+        });
+    </script>
 </body>
+
 </html>
